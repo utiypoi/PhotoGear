@@ -1,42 +1,202 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PhotoGear - аппаратура для фотосъемки </title>
-    <meta name="description" content="Интернет-магазин аппаратуры для фотосъемки">
-    <link rel="" type="text/css" href="styles.css"/>
+    <title>PhotoGear - аппаратура для фотосъемки</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div><a href="index.html" target="_self">PhotoGear</a></div>
-        <nav>
-            <ul>
-                <li><a href="index.html" target="_self">Главная</a></li>
-                <li><a>Каталог</a></li>
-                <li><a>О магазине</a></li>
-                <li><a>Контакты</a></li>
-            </ul>
-        </nav>
-        <form>
-            <input name="search"/>
-            <input type="submit" value="Найти"/>
-        </form>
-        <a>Войти</a>
-        <a>Корзина</a>
-    </header>
-    <article>
-        <div class="banner-container">
-            <img src="/image/banner_photo.jpg" alt="Баннер фотоаппарата"/>
-        <section>
-            <h2>Ловите каждый момент</h2>
-            <p>Техника для вашего творчества</p>
-            <p>Фотоаппараты, объективы и аксессуары для тех, кто хочет видеть больше</p>
-            <input type="submit" value="Смотреть каталог"/>
-            <a>Подобрать технику</a>
-        </section>
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                PhotoGear
+            </a>
+            <nav class="navigation">
+                <a href="#main">Главная</a>
+                <a href="#catalog">Каталог</a>
+                <a href="#about">О магазине</a>
+                <a href="#contacts">Контакты</a>
+            </nav>
+            <form class="search">
+                <input
+                    type="search"
+                    placeholder="Найти фотоаппарат, объектив..."
+                    aria-label="Поиск"
+                >
+                <button type="submit" aria-label="Найти">⌕</button>
+            </form>
+
+            <div class="header-actions">
+                <a href="#" aria-label="Пользователь">Войти</a>
+                <a href="#" aria-label="Корзина">Корзина</a>
+            </div>
         </div>
-        
-    </article>
+    </header>
+    <main>
+        <section class="hero container">
+            <div class="hero-content">
+                <h1>Техника для вашего творчества</h1>
+                <p>Профессиональная техника для каждого</p>
+                <a href="#catalog" class="button button-dark">
+                    Смотреть каталог
+                </a>
+            </div>
+            <div class="hero-image">
+                <img
+                    src="../frontend/image/photo_banner.jpg"
+                    alt="Фотоаппарат для профессиональной съёмки"
+                >
+            </div>
+        </section>
+        <section class="section container" id="categories">
+            <div class="section-header">
+                <h2>Популярные категории</h2>
+                <a href="#catalog" class="text-link">
+                    Все категории ->
+                </a>
+            </div>
+            <div class="categories-grid">
+                <a href="#catalog" class="category-card">
+                    <h3>Камеры</h3>
+                    <span>Смотреть →</span>
+                </a>
+                <a href="#catalog" class="category-card">
+                    <h3>Объективы</h3>
+                    <span>Смотреть →</span>
+                </a>
+                <a href="#catalog" class="category-card">
+                    <h3>Штативы</h3>
+                    <span>Смотреть →</span>
+                </a>
+                <a href="#catalog" class="category-card">
+                    <h3>Сумки и рюкзаки</h3>
+                    <span>Смотреть →</span>
+                </a>
+                <a href="#catalog" class="category-card">
+                    <h3>Освещение</h3>
+                    <span>Смотреть →</span>
+                </a>
+                <a href="#catalog" class="category-card">
+                    <h3>Аксессуары</h3>
+                    <span>Смотреть →</span>
+                </a>
+            </div>
+        </section>
+        <section class="section container" id="catalog">
+            <div class="section-header">
+                <h2 id="sales">Популярные товары</h2>
+                <a href="#catalog" class="text-link">
+                    Весь каталог ->
+                </a>
+            </div>
+            <div class="products-grid">
+                <article class="product-card">
+                    <div class="product-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=600&q=80"
+                            alt="Фотоаппарат Alpha"
+                        >
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Sony Alpha A7 IV</h3>
+                        <p class="description">...</p>
+                        <p class="price">249 990 ₽</p>
+                        <button class="button button-dark add-to-cart">
+                            В корзину
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1617005082133-548c4dd27f35?auto=format&fit=crop&w=600&q=80"
+                            alt="Объектив для фотоаппарата"
+                        >
+                    </div>
+                    <div class="product-info">
+                        <h3>Sony FE 50mm f/1.8</h3>
+                        <p class="description">...</span></p>
+                        <p class="price">49 990 ₽</p>
+                        <button class="button button-dark add-to-cart">
+                            В корзину
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img
+                            src="https://images.unsplash.com/photo- tripod?auto=format&fit=crop&w=600&q=80"
+                            alt="Штатив для камеры"
+                        >
+                    </div>
+
+                    <div class="product-info">
+                        <h3>Manfrotto Befree</h3>
+                        <p class="description">...</p>
+                        <p class="price">29 990 ₽</p>
+                        <button class="button button-dark add-to-cart">
+                            В корзину
+                        </button>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <div class="product-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+                            alt="Рюкзак для фототехники"
+                        >
+                    </div>
+                    <div class="product-info">
+                        <h3>Peak Design Everyday</h3>
+                        <p class="description">...</p>
+                        <p class="price">34 990 ₽</p>
+                        <button class="button button-dark add-to-cart">
+                            В корзину
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="footer" id="contacts">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo logo-light">
+                        📷 PhotoGear
+                    </a>
+                    <p>Профессиональная фототехника для ваших идей</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Каталог</h3>
+                    <a href="#categories">Камеры</a>
+                    <a href="#categories">Объективы</a>
+                    <a href="#categories">Штативы</a>
+                    <a href="#categories">Аксессуары</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Информация</h3>
+                    <a href="#about">О магазине</a>
+                    <a href="#">Доставка</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакты</h3>
+                    <a href="mailto:info@photogear.ru">
+                        info@photogear.ru
+                    </a>
+                    <a href="tel:+7900000000">
+                        +7 900 000-00-00
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
